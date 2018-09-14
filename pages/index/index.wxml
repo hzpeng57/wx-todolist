@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class='page'>
+<button size='mini' bindtap='clickAddBtn'>新建</button>
+    <view class='list'>
+        <view class='item' wx:for='{{todoList}}' wx:key="{{index}}">
+            <view class='order-num'>{{index + 1}}、</view>
+            <text wx:if='{{!item.isInput}}' bindlongpress='operaItem' data-index='{{index}}' data-id='{{item.id}}'>{{item.content}}</text>
+            <textarea wx:if='{{item.isInput}}' class='item-input' auto-height auto-focus='true' value='{{item.content}}' bindconfirm='updateItem' data-id='{{item.id}}'></textarea>
+        </view>
+        <textarea wx:if='{{isAdd}}' class='item-input add-input' auto-height auto-focus='true' bindconfirm='addItem'></textarea>
+        
+    </view>
+</view>

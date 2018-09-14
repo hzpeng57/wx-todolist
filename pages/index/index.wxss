@@ -1,0 +1,27 @@
+/**index.wxss**/
+.page {
+    padding: 40rpx;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10rpx 0 10rpx 20rpx;
+    font-size: 32rpx;
+}
+
+.item-input {
+    color: #333;
+    background-color: #eee;
+    padding: 20rpx;
+}
+
+.order-num {
+    width: 50rpx;
+}
+
+.add-input {
+    width: auto;
+    font-size: 26rpx;
+}
